@@ -1,0 +1,23 @@
+استيراد numpy كما NP.
+
+def حجم_of_prism ():
+ # حدود التكامل ل r و theta 
+ R = NP.linspace (0، 4، 100) 
+ theta = np.linspace (0، 2 * np.pi، 100) 
+    
+ # Meshgrid ل r و theta 
+ R، ثيتا = np.meshgrid (ص، ثيتا) 
+    
+ # حساب integrand 
+ Integrand = R * (4 - R * np.sin (Theta)) 
+    
+ # حساب عناصر الحجم التفاضلي 
+ dV = R * dR * dTheta * dz 
+    
+ # أداء الثلاثي لا يتجزأ 
+ المجلد = np.trapz (np.trapz (np.trapz (Integrand، x = dz) ، x = dR) ، x = dTheta) 
+ حجم العودة. 
+
+# حساب وطباعة المجلد
+حجم = volume_of_prism ()
+طباعة (و"حجم المنشور هو تقريبا {حجم:.2f} وحدات مكعبة".)(و "حجم المنشور هو تقريبا {الحجم:.2f} وحدات مكعبة".)
